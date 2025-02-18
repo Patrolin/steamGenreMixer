@@ -1,3 +1,4 @@
+# `python run_scrapers.py` or `nohup python run_scrapers.py`
 from scrape_steam_apps import scrape_steam_apps
 
 scrapers = [
