@@ -84,7 +84,8 @@ def formatTime(seconds: float) -> str:
     return f"{minutes} min {seconds} s"
   else:
     return f"{seconds/1} s"
-if __name__ == '__main__':
+
+def scrape_steam_apps():
   try:
     all_apps = requests.get('https://api.steampowered.com/ISteamApps/GetAppList/v2/').json()['applist']['apps']
     all_apps_count = len(all_apps)
@@ -124,6 +125,9 @@ if __name__ == '__main__':
           sleep(time_to_wait)
   except KeyboardInterrupt:
     exit(1)
+
+if __name__ == '__main__':
+  scrape_steam_apps()
 
 # TODO: scrape type of content:
 #   .Soundtrack
