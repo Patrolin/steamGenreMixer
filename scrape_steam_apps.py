@@ -120,7 +120,7 @@ def scrape_steam_apps():
         dt_active = t - prev_active_t
         remaining_count = all_apps_count - i
         time_to_wait = max(0.0, get_time_to_wait_until() - t)
-        print(f"  Progress: {i}/{all_apps_count}, ETA: {formatTime(remaining_count * SECONDS_BETWEEN_REQUESTS)}, (took {dt_active:.2} s, waiting {time_to_wait:.2} s)")
+        print(f"  Progress: {i}/{all_apps_count}, ETA: {formatTime(remaining_count * SECONDS_BETWEEN_REQUESTS)}, (took {dt_active:.2} s, waiting {time_to_wait:.2} s)", flush=True)
         if time_to_wait > 0:
           sleep(time_to_wait)
   except KeyboardInterrupt:
