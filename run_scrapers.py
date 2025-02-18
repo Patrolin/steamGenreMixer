@@ -1,8 +1,8 @@
 from scrape_steam_apps import scrape_steam_apps
 
-functions = [
+scrapers = [
   scrape_steam_apps
 ]
 if __name__ == '__main__':
-  for function in functions:
-    function()
+  for scraper in scrapers:
+    scraper()
